@@ -3,6 +3,10 @@
     <title>Hello world</title>
   </head>
   <body>
-    Hello world!
+    <script>
+      fetch('./helloworld.json')
+        .then(response => response.json())
+        .then(data => document.write(data.message));
+    </script>
   </body>
 </html>
